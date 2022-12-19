@@ -1,0 +1,133 @@
+.sidebar_box {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 0.4s ease;
+  box-shadow: 7px 0px 5px 0px rgba(214, 195, 195, 0.69);
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 100;
+  overflow: scroll;
+}
+
+.sidebar_box {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+.sidebar_box::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.close {
+  border: none;
+  font-size: 22px;
+  background: transparent;
+  outline: none;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 0.6;
+}
+
+.close:active {
+  opacity: 1;
+}
+
+.toggle,
+.input {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 346px) {
+  .toggle,
+  .input {
+    right: 10px;
+    top: 10px;
+  }
+
+  .sidebar_box {
+    width: 70vw;
+  }
+}
+
+.title {
+  padding: 24px 24px 24px 12px;
+}
+
+.toggle {
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #111;
+  transition: 0.2s ease;
+}
+
+.toggle:hover {
+  opacity: 0.6;
+}
+
+span {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #111;
+  transition: 0.1s ease;
+}
+
+.input {
+  opacity: 0;
+}
+
+.input:checked ~ .sidebar_box {
+  left: 0;
+}
+
+.input:checked ~ .sidebar_box {
+  left: 0;
+}
+
+.input:checked ~ .toggle {
+  background-color: #111;
+  color: #fff;
+}
+
+span:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  top: -5px;
+  transition: 0.1s ease;
+}
+
+span:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  bottom: -5px;
+  transition: 0.1s ease;
+}
+
+.active {
+  background-color: #c2d0fda1;
+}

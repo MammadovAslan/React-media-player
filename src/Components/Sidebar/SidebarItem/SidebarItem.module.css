@@ -1,0 +1,31 @@
+.item {
+  transition: 0.2s ease;
+  cursor: pointer;
+  padding: 12px 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.item:hover {
+  box-shadow: -5px 0px 15px 15px rgba(214, 195, 195, 0.69);
+  padding: 24px;
+}
+
+.image {
+  height: 80px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.song_name {
+  font-size: 14px;
+}
+
+.artist {
+  font-size: 12px;
+}

@@ -1,0 +1,17 @@
+.speed_button {
+  border: 1px solid rgb(153, 149, 149);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  font-size: 12px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.speed_button:hover {
+  opacity: 0.7;
+}
+.speed_button:active {
+  opacity: 1;
+}
