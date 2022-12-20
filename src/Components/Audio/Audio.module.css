@@ -77,6 +77,28 @@
   position: absolute;
   left: 25px;
   top: 6px;
+  width: 0px;
+  height: 10px;
+  border-left: none;
+  -webkit-appearance: none;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 1);
+  transition: 0.2s linear;
+}
+
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #111;
+  cursor: pointer;
+  border: 3px solid #fff;
+  box-shadow: -407px 0 0 400px rgb(153, 149, 149);
 }
 
 .volume_icon,
@@ -135,6 +157,21 @@
   gap: 50px;
 }
 
+@media (max-width: 605px) {
+  .reset_button {
+    display: none;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.main_controls {
+  display: flex;
+  gap: 30px;
+}
+
 .speed {
   display: flex;
   justify-content: flex-start;
@@ -146,28 +183,4 @@
 .current_speed {
   position: absolute;
   right: -50%;
-}
-
-.volume {
-  width: 0px;
-  height: 10px;
-  border-left: none;
-  -webkit-appearance: none;
-  background: #fff;
-  cursor: pointer;
-  outline: none;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 1);
-  transition: 0.2s linear;
-}
-.volume::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #111;
-  cursor: pointer;
-  border: 3px solid #fff;
-  box-shadow: -407px 0 0 400px rgb(153, 149, 149);
 }

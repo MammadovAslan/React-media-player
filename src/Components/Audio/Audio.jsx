@@ -194,6 +194,8 @@ const Audio = (props) => {
           }}
           className={s.reset_button}
         />
+        <div className={s.main_controls}>
+          
         <Button
           buttonRef={prevRef}
           icon="fa-solid fa-backward"
@@ -211,6 +213,7 @@ const Audio = (props) => {
           onclick={setNextSong}
           className={s.next_button}
         />
+        </div>
         <div className={s.sound}>
           <Button
             icon={volume > 0 ? "fa-solid fa-volume-high" : "fa-solid fa-volume-xmark"}
@@ -222,7 +225,7 @@ const Audio = (props) => {
             type="range"
             onChange={volumeChangeHandler}
             className={s.volume}
-            value={volume * 100}
+            value={audioRef?.current?.volume * 100}
           />
         </div>
       </div>
